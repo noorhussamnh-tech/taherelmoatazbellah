@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Taher El Moataz Bellah">
+<meta property="og:description" content="Screenwriter of 30 El Da7ee7 episodes and author of seven books on power, history and genius.">
+<meta property="og:image" content="images/taher-portrait.jpg">
+<meta property="og:type" content="website">
+<title>Taher El Moataz Bellah</title>
+<meta name="description" content="Taher El Moataz Bellah: screenwriter of 30 El Da7ee7 episodes and author of seven books on power, history and genius.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;600&family=Instrument+Sans:wght@400;500;600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: warm charcoal spreads alternate with off-white pages; oxblood red is used sparingly for rules and emphasis. */
+:root{
+  --ink:#2B2624;          /* warm charcoal, pulled from the wood panelling in his portrait */
+  --ink-2:#342E2C;
+  --ink-3:#423A37;
+  --paper:#F2EEE8;        /* off-white document stock */
+  --paper-2:#E7E1D9;
+  --white:#FFFFFF;
+  --red:#B3162D;          /* oxblood red: stamps, bars, rules (matches the leather + bindings in the photo) */
+  --red-lit:#EA5466;      /* red for small text on charcoal */
+  --fog:#B3AAA4;          /* secondary text on charcoal */
+  --graphite:#5B5552;     /* secondary text on paper */
+  --line-d:rgba(255,255,255,.14);
+  --line-p:rgba(10,9,9,.16);
+
+  --f-bond:"Jost","Futura","Century Gothic","Avenir Next",sans-serif;
+  --f-display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --f-body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-ar-display:"Amiri","Traditional Arabic","Times New Roman",serif;
+  --f-ar:"IBM Plex Sans Arabic","Geeza Pro",Tahoma,sans-serif;
+
+  --step--1:clamp(.78rem,.75rem + .12vw,.84rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.1rem);
+  --step-1:clamp(1.2rem,1.1rem + .5vw,1.45rem);
+  --step-2:clamp(1.6rem,1.3rem + 1.4vw,2.4rem);
+  --step-3:clamp(2.2rem,1.6rem + 2.8vw,4rem);
+  --step-4:clamp(3rem,1.8rem + 6vw,7.6rem);
+
+  --wrap:1240px;
+  --gut-l:max(16px,env(safe-area-inset-left,0px));
+  --gut-r:max(16px,env(safe-area-inset-right,0px));
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--white);font-family:var(--f-body);font-size:var(--step-0);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red-lit);outline-offset:3px}
+::selection{background:var(--red);color:var(--white)}
+
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:calc(var(--gut-l) + clamp(0px,3vw,32px));padding-right:calc(var(--gut-r) + clamp(0px,3vw,32px))}
+.mono{font-family:var(--f-mono);font-size:var(--step--1);letter-spacing:.12em;text-transform:uppercase}
+.ar{font-family:var(--f-ar-display);direction:rtl;unicode-bidi:isolate}
+h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.02;text-wrap:balance;margin:0;letter-spacing:-.01em}
+p{margin:0}
+
+/* ---------- grain ---------- */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:70;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(43,38,36,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line-d)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:14px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark b{font-family:var(--f-display);font-style:italic;font-weight:600;font-size:1.35rem;letter-spacing:-.02em}
+.mark b i{color:var(--red-lit);font-style:normal}
+.mark span{color:var(--fog)}
+.nav ul{display:flex;gap:clamp(14px,2.4vw,34px);list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;color:var(--fog);transition:color .2s}
+.nav ul a:hover{color:var(--white)}
+.nav .cta{color:var(--white);text-decoration:none;border:1px solid var(--red);padding:8px 14px;transition:background .2s}
+.nav .cta:hover{background:var(--red)}
+@media (max-width:860px){.nav ul,.mark span{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;border-bottom:1px solid var(--line-d);overflow:hidden;min-height:min(100svh,960px);display:flex;align-items:flex-end;background:var(--ink)}
+.hero-bg{position:absolute;inset:-30% 0 -4% 0;z-index:0;will-change:transform}
+.hero-bg img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:72% 34%;filter:saturate(.9) contrast(1.04)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(0deg,var(--ink) 0%,rgba(43,38,36,0) 34%),
+    linear-gradient(90deg,rgba(43,38,36,.95) 0%,rgba(43,38,36,.82) 30%,rgba(43,38,36,.3) 58%,rgba(43,38,36,.05) 100%)}
+.hero .wrap{width:100%;display:flex;flex-direction:column;gap:clamp(32px,5vw,56px);padding-block:clamp(56px,9vw,120px) clamp(32px,4vw,48px);position:relative;z-index:2}
+.hero-copy{max-width:660px}
+.filehead{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--fog);margin-bottom:clamp(22px,4vw,44px)}
+.hero h1{font-size:var(--step-4);font-weight:500;line-height:.92}
+.hero h1 em{display:block;font-style:italic;font-weight:400;color:var(--paper)}
+.hero .arname{font-size:clamp(1.8rem,1.2rem + 2.2vw,3rem);color:var(--red-lit);margin-top:10px;line-height:1.3;text-align:left}
+.lede{max-width:30ch;font-family:var(--f-display);font-weight:400;font-size:clamp(1.3rem,1.1rem + .8vw,1.75rem);line-height:1.38;color:var(--paper);margin-top:clamp(22px,3vw,34px);letter-spacing:-.005em}
+.lede-facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:16px;color:var(--fog)}
+.lede-facts b{color:var(--red-lit);font-weight:500}
+
+
+
+/* exhibit (image slot) */
+.exhibit{position:relative;margin:0;background:var(--ink-2);border:1px solid var(--line-d);overflow:hidden;isolation:isolate;max-width:100%}
+.exhibit::before{content:"";position:absolute;inset:0;z-index:0;background:repeating-linear-gradient(135deg,transparent 0 11px,rgba(255,255,255,.035) 11px 12px)}
+.exhibit img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.exhibit .tag{position:absolute;left:12px;bottom:12px;z-index:3;display:flex;flex-direction:column;gap:2px;color:var(--fog)}
+.exhibit .tag b{color:var(--white);font-weight:500}
+.exhibit .cross{position:absolute;inset:14px;z-index:2;pointer-events:none;
+  background:
+   linear-gradient(var(--red),var(--red)) top left/14px 1px no-repeat,
+   linear-gradient(var(--red),var(--red)) top left/1px 14px no-repeat,
+   linear-gradient(var(--red),var(--red)) top right/14px 1px no-repeat,
+   linear-gradient(var(--red),var(--red)) top right/1px 14px no-repeat,
+   linear-gradient(var(--red),var(--red)) bottom left/14px 1px no-repeat,
+   linear-gradient(var(--red),var(--red)) bottom left/1px 14px no-repeat,
+   linear-gradient(var(--red),var(--red)) bottom right/14px 1px no-repeat,
+   linear-gradient(var(--red),var(--red)) bottom right/1px 14px no-repeat}
+.exhibit .pending{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;text-align:center;color:rgba(255,255,255,.28);white-space:nowrap}
+.exhibit.portrait{aspect-ratio:4/5}
+.exhibit.paperish{background:var(--paper-2);border-color:var(--line-p)}
+.exhibit.paperish::before{background:repeating-linear-gradient(135deg,transparent 0 11px,rgba(10,9,9,.05) 11px 12px)}
+.exhibit.paperish .tag{color:var(--graphite)}
+.exhibit.paperish .tag b{color:var(--ink)}
+.exhibit.paperish .pending{color:rgba(10,9,9,.3)}
+
+.ledger{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line-d);border:1px solid var(--line-d);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.ledger div{padding:16px 18px;background:rgba(43,38,36,.72);min-width:0}
+.ledger b{display:block;font-family:var(--f-display);font-weight:500;font-size:clamp(1.7rem,1.2rem + 1.6vw,2.4rem);line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.ledger b i{font-style:normal;color:var(--red-lit)}
+.ledger span{display:block;color:var(--fog);font-size:.86rem;line-height:1.35;margin-top:6px}
+
+@media (max-width:860px){
+  .ledger{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ledger b{font-size:1.8rem}
+  .hero-bg img{object-position:74% 22%}
+  .hero::before{background:linear-gradient(0deg,var(--ink) 0%,rgba(43,38,36,.93) 48%,rgba(43,38,36,.35) 72%,rgba(43,38,36,.1) 100%)}
+  .hero .wrap{padding-top:52vh}
+  }
+
+/* ---------- section scaffolding ---------- */
+section{position:relative}
+.sec{padding-block:clamp(64px,10vw,140px)}
+.eyebrow{display:flex;align-items:center;gap:14px;color:var(--red-lit);margin-bottom:22px}
+.eyebrow::before{content:"";width:36px;height:1px;background:currentColor}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:clamp(36px,6vw,72px)}
+.sec-head h2{font-size:var(--step-3)}
+.sec-head h2 em{font-style:italic;color:var(--red-lit)}
+.sec-head p{color:var(--fog);max-width:46ch}
+@media (max-width:860px){.sec-head{grid-template-columns:minmax(0,1fr)}}
+
+/* paper sections */
+.paper{background:var(--paper);color:var(--ink)}
+.paper .eyebrow{color:var(--red)}
+.paper .sec-head h2 em{color:var(--red)}
+.paper .sec-head p{color:var(--graphite)}
+
+/* ---------- profile ---------- */
+.profile{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px)}
+.profile .quote{font-family:var(--f-display);font-size:var(--step-2);line-height:1.18;font-weight:400;text-wrap:balance}
+.profile .quote em{color:var(--red)}
+.profile .bio{display:flex;flex-direction:column;gap:18px;margin-top:28px;color:#2B2726;max-width:60ch}
+.record{border-top:2px solid var(--ink)}
+.record dl{margin:0}
+.record .row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line-p)}
+.record dt{color:var(--graphite);padding-top:3px}
+.record dd{margin:0;min-width:0}
+.record dd small{display:block;color:var(--graphite);font-size:.88rem;line-height:1.45;margin-top:2px}
+.record .head{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line-p);color:var(--graphite)}
+.record .head b{color:var(--red);font-weight:500}
+@media (max-width:860px){.profile{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.record .row{grid-template-columns:minmax(0,1fr);gap:4px}}
+
+/* ---------- daheeh ---------- */
+.daheeh{background:radial-gradient(ellipse 55% 60% at 0% 100%,rgba(179,22,45,.16),transparent 70%),var(--ink);overflow:hidden}
+.daheeh .big{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:end;border-bottom:1px solid var(--line-d);padding-bottom:clamp(28px,4vw,48px)}
+.daheeh .num{font-family:var(--f-display);font-weight:700;font-size:clamp(7rem,4rem + 16vw,18rem);line-height:.78;letter-spacing:-.05em;color:var(--white)}
+.daheeh .num sup{font-size:.22em;color:var(--red-lit);font-weight:500;letter-spacing:0;vertical-align:top;margin-left:.1em}
+.daheeh .big h2{font-size:var(--step-3)}
+.daheeh .big .ar{display:block;color:var(--red-lit);font-size:.8em;margin-top:6px;text-align:left}
+.daheeh .big p{color:var(--fog);max-width:48ch;margin-top:18px}
+
+.tally{margin-block:clamp(28px,4vw,44px);display:grid;grid-template-columns:repeat(30,minmax(0,1fr));gap:clamp(3px,.6vw,8px);align-items:end;height:84px}
+.tally i{display:block;height:58%;background:var(--ink-3);border-top:1px solid rgba(255,255,255,.25);transition:height .3s,background .3s}
+.tally i:hover{height:80%;background:#2A2525}
+.tally i.hit{height:100%;background:var(--red)}
+.tally-cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--fog)}
+.tally-cap b{color:var(--red-lit);font-weight:500}
+
+.dh-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line-d);border:1px solid var(--line-d);margin-top:clamp(36px,5vw,60px)}
+.dh-grid article{background:var(--ink);padding:clamp(20px,2.5vw,32px);display:flex;flex-direction:column;gap:12px;min-width:0}
+.dh-grid .mono{color:var(--fog)}
+.dh-grid h3{font-size:var(--step-2)}
+.dh-grid h3 .ar{display:block;font-size:.62em;color:var(--red-lit);margin-top:4px;text-align:left}
+.dh-grid p{color:#CFC9C4;font-size:.98rem}
+.dh-grid .fig{margin-top:auto;padding-top:16px;border-top:1px solid var(--line-d);display:flex;align-items:baseline;gap:10px}
+.dh-grid .fig b{font-family:var(--f-display);font-size:2rem;font-weight:500;line-height:1}
+.dh-grid .fig span{color:var(--fog);font-size:.86rem}
+@media (max-width:860px){.dh-grid{grid-template-columns:minmax(0,1fr)}.daheeh .big{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- books ---------- */
+.shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.book{position:relative;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line-p);min-width:0;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.book:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(10,9,9,.45)}
+.book .exhibit{aspect-ratio:3/4;border:0;border-bottom:1px solid var(--line-p)}
+.book .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.book .subj{color:var(--graphite);display:flex;justify-content:space-between;gap:10px}
+.book .subj b{color:var(--red);font-weight:500}
+.book .ar-title{font-family:var(--f-ar-display);font-weight:700;font-size:clamp(1.9rem,1.5rem + 1vw,2.4rem);line-height:1.25;direction:rtl;text-align:right}
+.book h3{font-size:1.25rem;font-weight:500;line-height:1.2}
+.book h3 em{font-style:italic}
+.book p{color:var(--graphite);font-size:.94rem;line-height:1.5}
+.book .honour{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line-p);display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--ink)}
+.book .honour::before{content:"";flex:none;width:8px;height:8px;margin-top:7px;background:var(--red);transform:rotate(45deg)}
+.book.lead{grid-column:span 3;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);background:var(--ink);color:var(--white);border-color:var(--ink)}
+.book.lead .exhibit{aspect-ratio:auto;min-height:420px;border-bottom:0;border-right:1px solid var(--line-d);background:var(--ink-2)}
+.book.lead .body{padding:clamp(24px,4vw,56px);gap:14px;justify-content:center}
+.book.lead .subj{color:var(--fog)}
+.book.lead .subj b{color:var(--red-lit)}
+.book.lead .ar-title{font-size:clamp(3.4rem,2rem + 5vw,6.4rem);text-align:right;line-height:1.1;color:var(--white)}
+.book.lead h3{font-size:var(--step-2)}
+.book.lead p{color:#CFC9C4;font-size:1.02rem;max-width:52ch}
+.book.lead .honour{color:var(--white);border-top-color:var(--line-d)}
+.book.lead .honour::before{background:var(--red-lit)}
+.shelf-foot{margin-top:28px;color:var(--graphite);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:980px){.shelf{grid-template-columns:repeat(2,minmax(0,1fr))}.book.lead{grid-column:span 2}}
+@media (max-width:640px){.shelf{grid-template-columns:minmax(0,1fr)}.book.lead{grid-column:auto;grid-template-columns:minmax(0,1fr)}.book.lead .exhibit{min-height:0;aspect-ratio:4/3;border-right:0;border-bottom:1px solid var(--line-d)}}
+
+
+/* real images */
+.exhibit.has-img::before,.exhibit.photo::before{display:none}
+.book .exhibit.has-img{aspect-ratio:auto;display:flex;align-items:center;justify-content:center;padding:clamp(22px,2.6vw,34px);background:var(--paper-2)}
+.book .exhibit.has-img img{position:static;display:block;height:clamp(250px,24vw,330px);width:auto;max-width:100%;object-fit:contain;box-shadow:0 22px 34px -20px rgba(20,14,12,.6),0 2px 6px rgba(20,14,12,.18);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.book:hover .exhibit.has-img img{transform:translateY(-4px) rotate(-.6deg)}
+.book.lead .exhibit.has-img{min-height:0;padding:clamp(28px,4vw,56px);background:radial-gradient(ellipse at 50% 38%,#4A2A2A 0%,var(--ink-2) 70%)}
+.book.lead .exhibit.has-img img{height:clamp(340px,40vw,560px);box-shadow:0 30px 60px -24px rgba(0,0,0,.8)}
+.exhibit.photo{aspect-ratio:4/5;border:0}
+.exhibit.photo img{object-position:50% 30%}
+@media (max-width:640px){.book.lead .exhibit.has-img{aspect-ratio:auto}.book .exhibit.has-img img{height:340px}.book.lead .exhibit.has-img img{height:400px}}
+
+/* ---------- beyond (screen, audio, analysis) ---------- */
+.beyond-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line-d);border:1px solid var(--line-d)}
+.beyond-grid article{background:var(--ink);padding:clamp(22px,3vw,40px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 20px;min-width:0;transition:background .3s}
+.beyond-grid article:hover{background:var(--ink-2)}
+.beyond-grid .mono{color:var(--red-lit);grid-column:1/-1}
+.beyond-grid h3{font-size:var(--step-2);grid-column:1}
+.beyond-grid .yr{grid-column:2;grid-row:2;color:var(--fog);align-self:end}
+.beyond-grid p{grid-column:1/-1;color:#CFC9C4;max-width:52ch;font-size:.98rem}
+.beyond-grid article{position:relative}
+.beyond-grid h3 a.go{text-decoration:none;color:inherit;background:linear-gradient(var(--red-lit),var(--red-lit)) 0 100%/0 1px no-repeat;transition:background-size .35s}
+.beyond-grid h3 a.go::after{content:"";position:absolute;inset:0;z-index:1}
+.beyond-grid article:hover h3 a.go{background-size:100% 1px}
+.beyond-grid .visit{grid-column:1/-1;color:var(--white);margin-top:10px;display:inline-flex;gap:8px;align-items:center}
+.beyond-grid .visit i{font-style:normal;color:var(--red-lit);transition:transform .3s}
+.beyond-grid article:hover .visit i{transform:translate(3px,-3px)}
+.tl-link{color:inherit;text-decoration:none}
+.tl-link i{font-style:normal;font-size:.6em;color:var(--red-lit);vertical-align:super}
+.tl-link:hover{text-decoration:underline;text-decoration-color:var(--red-lit);text-underline-offset:6px;text-decoration-thickness:1px}
+.listen{align-self:flex-start;margin-top:14px;color:var(--white);text-decoration:none;border:1px solid var(--red);padding:10px 16px;display:inline-flex;gap:10px;transition:background .25s}
+.listen:hover{background:var(--red)}
+.listen i{font-style:normal}
+@media (max-width:760px){.beyond-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- timeline (scroll spine) ---------- */
+.tl{background:radial-gradient(ellipse 60% 50% at 100% 0%,rgba(179,22,45,.14),transparent 70%),linear-gradient(180deg,var(--ink) 0%,#312A28 100%)}
+.spine{position:relative;list-style:none;margin:0 auto;padding:0;max-width:940px;display:flex;flex-direction:column;gap:clamp(40px,6vw,72px);--d:112px}
+.spine .track{position:absolute;left:calc(var(--d) / 2 - 2px);top:calc(var(--d) / 2);bottom:calc(var(--d) / 2);width:4px;background:var(--ink-3);border-radius:2px}
+.spine .fill{position:absolute;left:0;top:0;width:100%;height:0;background:var(--red);border-radius:2px}
+.node{position:relative;display:grid;grid-template-columns:var(--d) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:start}
+.dot{width:var(--d);height:var(--d);border-radius:50%;display:grid;place-items:center;background:var(--ink-2);border:2px solid var(--red);position:relative;z-index:1;transition:background .45s,transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.dot span{font-family:var(--f-display);font-weight:600;font-size:clamp(1.3rem,1rem + .9vw,1.75rem);font-variant-numeric:lining-nums;color:var(--white)}
+.node.on .dot{background:var(--red);transform:scale(1.04);box-shadow:0 0 0 8px rgba(179,22,45,.18)}
+.txt{padding-top:clamp(6px,1.4vw,18px);min-width:0;transition:opacity .45s,transform .45s}
+.txt .where{color:var(--red-lit)}
+.txt h3{font-size:var(--step-2);font-style:italic;font-weight:600;margin-top:6px;line-height:1.08}
+.txt p{color:#D6CFCA;margin-top:12px;max-width:62ch}
+.spine.js .node:not(.on) .txt{opacity:.55}
+@media (max-width:640px){.spine{--d:68px}.dot span{font-size:1.05rem}}
+
+/* ---------- workshops ---------- */
+.room{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,80px);align-items:center}
+.room h2{font-size:var(--step-3)}
+.room h2 em{font-style:italic;color:var(--red-lit)}
+.room p{color:#CFC9C4;margin-top:20px;max-width:52ch}
+.clients{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.clients span{border:1px solid var(--line-d);padding:8px 14px;color:var(--white)}
+@media (max-width:860px){.room{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- contact ---------- */
+.contact{background:var(--red);color:var(--white);overflow:hidden}
+.contact .wrap{padding-block:clamp(64px,10vw,130px)}
+.contact h2{font-size:var(--step-4);line-height:.92;max-width:12ch}
+.contact h2 em{font-style:italic;font-weight:400}
+.contact-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;margin-top:clamp(36px,5vw,64px);align-items:end}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.mail .addr{color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45);font-family:var(--f-display);font-size:clamp(1.3rem,1rem + 1.4vw,2.2rem);user-select:all;word-break:break-all}
+.copy{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--white);border:0;padding:10px 14px;cursor:pointer}
+.copy:hover{background:#000}
+.socials{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.35)}
+.socials a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.35);text-decoration:none;transition:padding .25s}
+.socials a:hover{padding-left:10px}
+.socials b{font-family:var(--f-display);font-weight:500;font-size:1.4rem}
+.socials span{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.06em;opacity:.85;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:760px){.contact-row{grid-template-columns:minmax(0,1fr)}}
+
+footer{background:var(--ink);color:var(--fog);border-top:1px solid var(--line-d)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:22px}
+
+/* ---------- 007 headline treatment: About section onward ---------- */
+#profile .quote{font-family:var(--f-bond);font-weight:300;font-size:clamp(1.5rem,1.1rem + 1.4vw,2.2rem);line-height:1.3;letter-spacing:.005em}
+#profile .quote em{font-style:normal;font-weight:500;color:var(--red)}
+#profile ~ section h2{font-family:var(--f-bond);font-weight:400;text-transform:uppercase;letter-spacing:.07em;line-height:1.08;font-size:clamp(1.9rem,1.25rem + 2.4vw,3.3rem)}
+#profile ~ section h2 em{font-style:normal;font-weight:300;color:var(--red-lit)}
+#profile ~ section.paper h2 em{color:var(--red)}
+#profile ~ section.contact h2 em{color:var(--white);opacity:.82}
+#profile ~ section h3{font-family:var(--f-bond);font-weight:500;text-transform:uppercase;letter-spacing:.08em;line-height:1.2}
+#profile ~ section h3 em{font-style:normal}
+.dh-grid h3,.beyond-grid h3{font-size:clamp(1.25rem,1rem + .9vw,1.7rem)}
+.book h3{font-size:1rem}
+.book.lead h3{font-size:clamp(1.2rem,1rem + .8vw,1.6rem)}
+.daheeh .num{font-family:var(--f-bond);font-weight:500;letter-spacing:-.03em}
+.daheeh .num sup{font-family:var(--f-mono);font-size:.12em;letter-spacing:.14em;margin-left:.3em}
+.dh-grid .fig b,.socials b,.mail .addr{font-family:var(--f-bond);letter-spacing:.04em}
+.socials b{text-transform:uppercase;font-size:1.05rem;letter-spacing:.14em;font-weight:500}
+.contact h2{font-size:clamp(2rem,1.1rem + 4vw,4.8rem);line-height:1.02;max-width:16ch;overflow-wrap:anywhere}
+.contact h2 em{color:var(--white);font-weight:300}
+.paper .room p{color:var(--graphite)}
+.paper .clients span{color:var(--ink);border-color:var(--line-p)}
+
+/* ---------- hero: deeper charcoal for contrast ---------- */
+.hero{background:#171413}
+.hero::before{background:
+  linear-gradient(0deg,#171413 0%,rgba(23,20,19,0) 40%),
+  linear-gradient(90deg,rgba(23,20,19,.97) 0%,rgba(23,20,19,.9) 32%,rgba(23,20,19,.5) 60%,rgba(23,20,19,.15) 100%)}
+.hero-bg img{filter:saturate(.92) contrast(1.12) brightness(.88)}
+.ledger div{background:rgba(23,20,19,.8)}
+.nav{background:rgba(23,20,19,.88)}
+body::before{background:#171413}
+@media (max-width:860px){.hero::before{background:linear-gradient(0deg,#171413 0%,rgba(23,20,19,.96) 48%,rgba(23,20,19,.45) 72%,rgba(23,20,19,.15) 100%)}}
+
+/* ===== TRIAL: Heartbeat deck fonts (Cormorant Garamond + Poppins). Delete this block to change back. ===== */
+:root{
+  --f-display:"Cormorant Garamond","Garamond","Baskerville",Georgia,serif;
+  --f-bond:"Cormorant Garamond","Garamond","Baskerville",Georgia,serif;
+  --f-body:"Poppins","Helvetica Neue",Arial,sans-serif;
+}
+body{font-size:clamp(.95rem,.92rem + .15vw,1.03rem);line-height:1.7}
+.hero h1{font-weight:500;font-size:clamp(3.4rem,2rem + 6.4vw,8.2rem);line-height:.9}
+.hero h1 em{font-weight:400}
+.lede{font-size:clamp(1.4rem,1.15rem + .9vw,1.95rem);line-height:1.32}
+.sec-head h2,#profile ~ section h2{font-family:var(--f-display);text-transform:none;letter-spacing:-.005em;font-weight:500;line-height:1.02;font-size:clamp(2.3rem,1.4rem + 3.2vw,4.3rem)}
+#profile ~ section h2 em,.sec-head h2 em{font-style:italic;font-weight:500}
+#profile ~ section h3{font-family:var(--f-display);text-transform:none;letter-spacing:0;font-weight:600;line-height:1.1}
+#profile ~ section h3 em{font-style:italic}
+.dh-grid h3,.beyond-grid h3{font-size:clamp(1.6rem,1.25rem + 1.1vw,2.2rem)}
+.book h3{font-size:1.35rem}
+.book.lead h3{font-size:clamp(1.6rem,1.2rem + 1.2vw,2.2rem)}
+#profile .quote{font-family:var(--f-display);font-weight:400;font-size:clamp(1.8rem,1.3rem + 1.7vw,2.7rem);line-height:1.18;letter-spacing:0}
+#profile .quote em{font-style:italic;font-weight:500}
+.daheeh .num{font-family:var(--f-display);font-weight:500;letter-spacing:-.04em;line-height:.8}
+h1,h2,h3,.num,.ledger b,.dot span,.fig b,.quote,.lede{font-variant-numeric:lining-nums}
+.txt h3{font-size:clamp(1.8rem,1.3rem + 1.4vw,2.6rem);font-weight:600}
+.dot span{font-weight:600;font-size:clamp(1.5rem,1.15rem + 1vw,2rem)}
+.ledger b{font-size:clamp(2rem,1.4rem + 1.8vw,2.8rem)}
+.dh-grid .fig b{font-size:2.3rem;letter-spacing:0}
+.socials b{font-family:var(--f-display);text-transform:none;letter-spacing:0;font-size:1.6rem;font-weight:600}
+.mail .addr{font-family:var(--f-display);letter-spacing:0;font-weight:500}
+.contact h2{font-size:clamp(2.6rem,1.4rem + 5vw,6rem);line-height:.98}
+.contact h2 em{font-style:italic}
+.mark b{font-size:1.4rem;font-style:normal;font-weight:600;letter-spacing:0;white-space:nowrap}
+@media (max-width:640px){.dot span{font-size:1.2rem}}
+/* ===== end trial ===== */
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Taher El Moataz Bellah, home">
+      <b>Taher El Moataz Bellah</b>
+      <span class="mono">Writer · Cairo</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="mono">
+        <li><a href="#record">Timeline</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#daheeh">El Da7ee7</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#beyond">Screen &amp; Audio</a></li>
+      </ul>
+    </nav>
+    <a class="cta mono" href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"><img src="images/taher-portrait.jpg" alt=""></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="filehead mono">
+        <span>Screenwriter</span><span>Author</span><span>Founder, Heartbeat Productions</span>
+      </div>
+      <h1>Taher<em>El Moataz Bellah</em></h1>
+      <div class="arname ar" lang="ar">طاهر المعتز بالله</div>
+      <p class="lede">He writes about power, history and the people behind the headlines, with stories built on research and told like thrillers.</p>
+    </div>
+
+      <div class="ledger">
+        <div><b>30</b><span>El Da7ee7 episodes written</span></div>
+        <div><b>07</b><span>books in print</span></div>
+        <div><b>20<i>M</i></b><span>views on his WWII episode, the show’s most watched</span></div>
+        <div><b>1<i>B+</i></b><span>views across El Da7ee7</span></div>
+      </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="record" class="tl sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow mono">Timeline</div>
+        <h2>From engineering <em>to the screen.</em></h2>
+      </div>
+      <p>Student politics, oil fields, the Arab world’s biggest YouTube show, Harvard, and a film studio.</p>
+    </div>
+    <ol class="spine" id="spine">
+      <span class="track" aria-hidden="true"><span class="fill" id="fill"></span></span>
+      <li class="node"><div class="dot"><span>2012</span></div><div class="txt"><span class="where mono">American University in Cairo</span><h3>Student Union President</h3><p>Elected president of the AUC Student Union. Negotiated an agreement with the administration to reduce tuition fees and give students more seats on university committees, and founded an Emergency Relief Fund for campus workers and staff.</p></div></li>
+      <li class="node"><div class="dot"><span>2014</span></div><div class="txt"><span class="where mono">Graduation, AUC</span><h3>Ahmed Zewail Prize</h3><p>Graduates Cum Laude in Petroleum &amp; Energy Engineering with a minor in Political Science, on the Dean’s List for eight semesters, and receives the Ahmed Zewail Prize for Excellence in Science &amp; Humanities.</p></div></li>
+      <li class="node"><div class="dot"><span>2016</span></div><div class="txt"><span class="where mono">Cairo · Oman</span><h3>Drilling Engineer, BP</h3><p>Four years in the oil industry. Contributes to more than $12M in annual cost savings on the Khazan field in Oman, and on the side founds Scissors, an on-demand beauty service for women with limited mobility.</p></div></li>
+      <li class="node"><div class="dot"><span>2018</span></div><div class="txt"><span class="where mono">YouTube</span><h3>Writing El Da7ee7</h3><p>Joins the writers’ room of the biggest online show in the Arab world. His World War II episode becomes the show’s most watched at 20M views, and five of its ten most-watched episodes are his.</p></div></li>
+      <li class="node"><div class="dot"><span>2019</span></div><div class="txt"><span class="where mono">Kayan · Dar El Shorouk</span><h3>The first books</h3><p>Starts publishing biographies of the people who shaped power and culture, from Vladimir Putin and Princess Diana to Muhammad Ali, Malcolm X and Einstein.</p></div></li>
+      <li class="node"><div class="dot"><span>2020</span></div><div class="txt"><span class="where mono">El Da7ee7 Museum · Sync School</span><h3>Shahid &amp; the classroom</h3><p>Writes the Steve Jobs episode of El Da7ee7 Museum for Shahid, and begins teaching storytelling workshops for writers and for teams at Roche, AstraZeneca and Apache.</p></div></li>
+      <li class="node"><div class="dot"><span>2021</span></div><div class="txt"><span class="where mono">Boston · Storytel</span><h3>Harvard &amp; Storytel</h3><p>Starts his MBA at Harvard Business School on the Onsi Sawiris full scholarship, and launches El Da7ee7a, which becomes 2022’s most-listened series in Egypt, Saudi Arabia and the UAE.</p></div></li>
+      <li class="node"><div class="dot"><span>2023</span></div><div class="txt"><span class="where mono">Founder &amp; Screenwriter</span><h3><a class="tl-link" href="https://www.linkedin.com/company/heartbeatproductions/" target="_blank" rel="noopener">Heartbeat Productions <i>↗</i></a></h3><p>Graduates from HBS with a top-rated case study on Mohamed Salah, and founds a film studio to take Arab stories to global audiences. First feature, <em>Unicorn</em>, enters pre-production.</p></div></li>
+      <li class="node"><div class="dot"><span>2026</span></div><div class="txt"><span class="where mono">Founder &amp; Presenter</span><h3><a class="tl-link" href="https://www.youtube.com/@taherelmoataz" target="_blank" rel="noopener">The Geopolitical Channel <i>↗</i></a></h3><p>Steps in front of the camera with his own YouTube channel on geopolitics: the conflicts, alliances and power plays shaping the region.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section id="profile" class="paper sec">
+  <div class="wrap profile">
+    <div>
+      <div class="eyebrow mono">About</div>
+      <p class="quote">An engineer by training, a political scientist by instinct, and a storyteller by trade. He turns history and politics into stories <em>people can’t stop watching.</em></p>
+      <div class="bio">
+        <p>Taher El Moataz Bellah is the screenwriter and bestselling author behind some of the most-watched and most-listened Arabic stories on YouTube, Storytel, Shahid and in print.</p>
+        <p>He wrote 30 episodes of El Da7ee7, the biggest online show in the Arab world, including its most-watched episode. His books profile the people who bent history: a Russian president, a British princess, two rival icons of Black America, and the geniuses who changed how the world writes and thinks.</p>
+        <p>Before writing full time he was a drilling engineer at BP. He holds an MBA from Harvard Business School and now runs Heartbeat Productions, a film studio taking Arab stories to global audiences.</p>
+      </div>
+    </div>
+
+    <div class="record">
+      <div class="head mono"><span>At a glance</span></div>
+      <dl>
+        <div class="row"><dt class="mono">Name</dt><dd>Taher El Moataz Bellah <span class="ar" lang="ar">· طاهر المعتز بالله</span></dd></div>
+        <div class="row"><dt class="mono">Occupation</dt><dd>Screenwriter, author, founder<small>Heartbeat Productions · The Geopolitical YouTube Channel</small></dd></div>
+        <div class="row"><dt class="mono">Education</dt><dd>MBA, Harvard Business School, 2023<small>Onsi Sawiris full scholar. Co-authored the Mohamed Salah case with Prof. Anita Elberse, the top-rated case among HBS students in 2023.</small></dd></div>
+        <div class="row"><dt class="mono">&nbsp;</dt><dd>BSc, American University in Cairo, 2014<small>Petroleum &amp; Energy Engineering, minor in Political Science. Cum Laude. Ahmed Zewail Prize for Excellence in Science &amp; Humanities.</small></dd></div>
+        <div class="row"><dt class="mono">Prior post</dt><dd>Drilling Engineer, BP<small>Contributed to $12M+ in annual cost savings on the Khazan field, Oman.</small></dd></div>
+        <div class="row"><dt class="mono">Known for</dt><dd>El Da7ee7 · <em>Caesar</em> · El Da7ee7a on Storytel</dd></div>
+        <div class="row"><dt class="mono">Base</dt><dd>Cairo, Egypt</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- EL DA7EE7 -->
+<section id="daheeh" class="daheeh sec">
+  <div class="wrap">
+    <div class="eyebrow mono">Screenwriting</div>
+    <div class="big">
+      <div class="num" aria-label="30 episodes">30<sup>EPS</sup></div>
+      <div>
+        <h2>El Da7ee7 <span class="ar" lang="ar">الدحيح</span></h2>
+        <p>Hosted by Ahmed El Ghandour, El Da7ee7 turned history, science and politics into comedy and topped YouTube charts across the Arab world for a decade. Taher wrote 30 of its episodes, including the one more people watched than any other.</p>
+      </div>
+    </div>
+
+    <div class="tally" role="img" aria-label="Thirty bars, one per episode written. The red bar marks the World War II episode.">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i class="hit"></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="tally-cap mono">
+      <span>One bar per episode written</span>
+      <span><b>■</b> World War II · 20M views · the show’s most watched</span>
+    </div>
+
+    <div class="dh-grid">
+      <article>
+        <span class="mono">YouTube · 2018–2020</span>
+        <h3>El Da7ee7 <span class="ar" lang="ar">الدحيح</span></h3>
+        <p>Scriptwriter on the biggest online show in MENA. Five of the show’s ten most-watched episodes are his.</p>
+        <div class="fig"><b>5/10</b><span>of the all-time top ten</span></div>
+      </article>
+      <article>
+        <span class="mono">Shahid · 2020</span>
+        <h3>El Da7ee7 Museum <span class="ar" lang="ar">متحف الدحيح</span></h3>
+        <p>Wrote the Steve Jobs episode for the Middle East’s leading streaming platform.</p>
+        <div class="fig"><b>MBC</b><span>Shahid original</span></div>
+      </article>
+      <article>
+        <span class="mono">Storytel · 2021–2023</span>
+        <h3>El Da7ee7a <span class="ar" lang="ar">الدحيحة</span></h3>
+        <p>Creator and screenwriter of the biographical audio series. Most-listened series in Egypt, Saudi Arabia and the UAE in 2022.</p>
+        <div class="fig"><b>#1</b><span>Storytel, three markets, 2022</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section id="books" class="paper sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow mono">Books</div>
+        <h2>Seven books on <em>power</em>, <em>genius</em> and the stories history left out.</h2>
+      </div>
+      <p>Published with Kayan and Dar El Shorouk. Biography written with the pace of a thriller and the rigour of an analyst.</p>
+    </div>
+
+    <div class="shelf">
+      <article class="book lead">
+        <figure class="exhibit has-img" data-slot="cover-caesar">
+          <img src="images/cover-caesar.jpg" alt="Cover of Caesar (القيصر) by Taher El Moataz Bellah" loading="lazy">
+        </figure>
+        <div class="body">
+          <div class="subj mono"><b>Vladimir Putin</b></div>
+          <div class="ar-title" lang="ar">القيصر</div>
+          <h3><em>Caesar</em>: The Secret History of Vladimir Putin</h3>
+          <p>How a KGB officer from Leningrad became the most consequential and least understood man in modern Russia. A study of ambition, secrecy and the machinery of power.</p>
+          <div class="honour">#1 audiobook in the UAE and Egypt</div>
+          <a class="listen mono" href="https://www.storytel.com/tv/books/%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE-%D8%A7%D9%84%D8%B3%D8%B1%D9%8A-%D9%84%D9%81%D9%84%D8%A7%D8%AF%D9%8A%D9%85%D9%8A%D8%B1-%D8%A8%D9%88%D8%AA%D9%8A%D9%86-2782840" target="_blank" rel="noopener">Listen on Storytel <i>↗</i></a>
+        </div>
+      </article>
+
+      <article class="book">
+        <figure class="exhibit has-img" data-slot="cover-daheeh">
+          <img src="images/cover-daheeh.jpg" alt="Cover of El Da7ee7: Behind the Scenes" loading="lazy">
+        </figure>
+        <div class="body">
+          <div class="subj mono"><b>El Da7ee7</b></div>
+          <div class="ar-title" lang="ar">الدحيح</div>
+          <h3>El Da7ee7: Behind the Scenes</h3>
+          <p>The inside story of the show that taught a generation to love history.</p>
+          <div class="honour">Most-read Arabic book on Goodreads, 2021–2022</div>
+        </div>
+      </article>
+
+      <article class="book">
+        <figure class="exhibit has-img" data-slot="cover-diana">
+          <img src="images/cover-diana.jpg" alt="Cover of Princess Diana (الأميرة ديانا)" loading="lazy">
+        </figure>
+        <div class="body">
+          <div class="subj mono"><b>Princess Diana</b></div>
+          <div class="ar-title" lang="ar">الأميرة ديانا</div>
+          <h3>Princess Diana</h3>
+          <p>A palace, a press pack and a princess who refused the script.</p>
+          <div class="honour">Bestseller list, Cairo International Book Fair</div>
+        </div>
+      </article>
+
+      <article class="book">
+        <figure class="exhibit has-img" data-slot="cover-blood-brothers">
+          <img src="images/cover-blood-brothers.jpg" alt="Cover of Blood Brothers (الأخوة الأعداء)" loading="lazy">
+        </figure>
+        <div class="body">
+          <div class="subj mono"><b>Ali &amp; Malcolm X</b></div>
+          <div class="ar-title" lang="ar">الأخوة الأعداء</div>
+          <h3>Blood Brothers</h3>
+          <p>Muhammad Ali and Malcolm X: a friendship, a faith and a split that shaped Black America.</p>
+          <div class="honour">El Da7ee7a series · Kayan × Storytel</div>
+        </div>
+      </article>
+
+      <article class="book">
+        <figure class="exhibit has-img" data-slot="cover-geniuses">
+          <img src="images/cover-geniuses.jpg" alt="Cover of Geniuses of Writing (عباقرة الكتابة)" loading="lazy">
+        </figure>
+        <div class="body">
+          <div class="subj mono"><b>Mahfouz · Rowling · Nolan</b></div>
+          <div class="ar-title" lang="ar">عباقرة الكتابة</div>
+          <h3>Geniuses of Writing</h3>
+          <p>Naguib Mahfouz, J.K. Rowling and Christopher Nolan, and how each built a world on the page.</p>
+          <div class="honour">Kayan × Storytel</div>
+        </div>
+      </article>
+
+      <article class="book">
+        <figure class="exhibit has-img" data-slot="cover-einstein">
+          <img src="images/cover-einstein.jpg" alt="Cover of Einstein (أينشتاين)" loading="lazy">
+        </figure>
+        <div class="body">
+          <div class="subj mono"><b>Albert Einstein</b></div>
+          <div class="ar-title" lang="ar">أينشتاين</div>
+          <h3>Einstein</h3>
+          <p>The patent clerk who rewrote time, and the politics that chased him across a continent.</p>
+          <div class="honour">El Da7ee7a series · Kayan × Storytel</div>
+        </div>
+      </article>
+
+      <article class="book">
+        <figure class="exhibit has-img" data-slot="cover-student-movement">
+          <img src="images/cover-student-movement.jpg" alt="Cover of The Student Movement at the American University in Cairo" loading="lazy">
+        </figure>
+        <div class="body">
+          <div class="subj mono"><b>AUC, Cairo</b></div>
+          <div class="ar-title" lang="ar">الحركة الطلابية في الجامعة الأمريكية</div>
+          <h3>The Student Movement at the American University in Cairo</h3>
+          <p>A history of campus activism, written by a former president of the AUC Student Union.</p>
+          <div class="honour">Non-fiction · political history</div>
+        </div>
+      </article>
+    </div>
+    <div class="shelf-foot mono"><span>Arabic editions</span><span>Kayan · Dar El Shorouk</span></div>
+  </div>
+</section>
+
+<!-- BEYOND -->
+<section id="beyond" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow mono">Now</div>
+        <h2>Screen, audio and <em>analysis</em>.</h2>
+      </div>
+      <p>Where the work is heading next: a film studio, a geopolitics channel, and a Harvard case study that students ranked above every other that year.</p>
+    </div>
+    <div class="beyond-grid">
+      <article>
+        <span class="mono">Film · Founder &amp; Screenwriter</span>
+        <h3><a class="go" href="https://www.linkedin.com/company/heartbeatproductions/" target="_blank" rel="noopener">Heartbeat Productions</a></h3>
+        <span class="yr mono">2023–</span>
+        <p>A film studio making Arab stories the whole world feels. First film, <em>Unicorn: What Are You Willing to Lose for a Billion Dollars?</em>, is in pre-production.</p>
+        <span class="visit mono">Follow on LinkedIn <i>↗</i></span>
+      </article>
+      <article>
+        <span class="mono">YouTube · Founder &amp; Presenter</span>
+        <h3><a class="go" href="https://www.youtube.com/@taherelmoataz" target="_blank" rel="noopener">The Geopolitical Channel</a></h3>
+        <span class="yr mono">2026–</span>
+        <p>Taher in front of the camera, breaking down the conflicts, alliances and power plays that shape the region and the world.</p>
+        <span class="visit mono">Watch on YouTube <i>↗</i></span>
+      </article>
+      <article>
+        <span class="mono">Harvard Business School · Case study</span>
+        <h3><a class="go" href="https://www.hbs.edu/faculty/Pages/item.aspx?num=64754" target="_blank" rel="noopener">Mohamed Salah</a></h3>
+        <span class="yr mono">2023</span>
+        <p>Co-authored with Prof. Anita Elberse. The top-rated case among HBS students in 2023.</p>
+        <span class="visit mono">Read the case at HBS <i>↗</i></span>
+      </article>
+      <article>
+        <span class="mono">Storytel · Audio</span>
+        <h3><a class="go" href="https://www.storytel.com/tv/books/%D8%A7%D9%84%D9%82%D9%8A%D8%B5%D8%B1-%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE-%D8%A7%D9%84%D8%B3%D8%B1%D9%8A-%D9%84%D9%81%D9%84%D8%A7%D8%AF%D9%8A%D9%85%D9%8A%D8%B1-%D8%A8%D9%88%D8%AA%D9%8A%D9%86-2782840" target="_blank" rel="noopener">Caesar, in audio</a></h3>
+        <span class="yr mono">#1</span>
+        <p>The Putin biography became the number one audiobook in the UAE and Egypt.</p>
+        <span class="visit mono">Listen on Storytel <i>↗</i></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOPS -->
+<section class="sec paper">
+  <div class="wrap room">
+    <div>
+      <div class="eyebrow mono">Talks, signings &amp; workshops</div>
+      <h2>On stage, at the book fair, <em>and in the room.</em></h2>
+      <p>Since 2020 Taher has run storytelling workshops at Sync School for Creative Learning, for new writers and for corporate teams who need their ideas to land.</p>
+      <div class="clients mono"><span>Roche</span><span>AstraZeneca</span><span>Apache</span><span>Sync School</span></div>
+    </div>
+    <figure class="exhibit photo" data-slot="workshop">
+      <img src="images/taher-books.jpg" alt="Taher El Moataz Bellah smiling behind copies of his books Einstein, El Da7ee7 and Princess Diana" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow mono" style="color:var(--white)">Get in touch</div>
+    <h2>Bookings, rights <em>&amp; collaborations.</em></h2>
+    <div class="contact-row">
+      <div>
+        <p class="mono" style="opacity:.85;margin-bottom:12px">Write to</p>
+        <div class="mail">
+          <a class="addr" id="addr" href="mailto:taherelmoataz@gmail.com">taherelmoataz@gmail.com</a>
+          <button class="copy" id="copy" type="button">Copy</button>
+        </div>
+      </div>
+      <ul class="socials">
+        <li><a href="mailto:taherelmoataz@gmail.com"><b>Email</b><span>taherelmoataz@gmail.com ↗</span></a></li>
+        <li><a href="https://www.instagram.com/taherelmoataz" target="_blank" rel="noopener"><b>Instagram</b><span>@taherelmoataz ↗</span></a></li>
+        <li><a href="https://www.youtube.com/@taherelmoataz" target="_blank" rel="noopener"><b>YouTube</b><span>@taherelmoataz ↗</span></a></li>
+        <li><a href="https://www.youtube.com/@taherelmoatazbellah" target="_blank" rel="noopener"><b>YouTube</b><span>@taherelmoatazbellah ↗</span></a></li>
+        <li><a href="https://www.facebook.com/share/1Bc3uPxJoP/" target="_blank" rel="noopener"><b>Facebook</b><span>Taher El Moataz Bellah ↗</span></a></li>
+        <li><a href="https://www.linkedin.com/in/taher-el-moataz-bellah-005b10206" target="_blank" rel="noopener"><b>LinkedIn</b><span>in/taher-el-moataz-bellah ↗</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap mono">
+    <span>© <span id="yr">2026</span> Taher El Moataz Bellah</span>
+    <span class="ar" lang="ar" style="font-family:var(--f-ar);letter-spacing:0;text-transform:none">طاهر المعتز بالله</span>
+    <span>Screenwriter · Author</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var bg=document.querySelector('.hero-bg'), hero=document.querySelector('.hero');
+  var still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(bg&&hero&&!still){
+    var ticking=false;
+    var move=function(){ticking=false;var h=hero.offsetHeight,s=Math.min(window.scrollY,h);bg.style.transform='translate3d(0,'+(s*0.3).toFixed(1)+'px,0) scale('+(1+s/h*0.06).toFixed(4)+')'};
+    addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(move)}},{passive:true});
+    move();
+  }
+  var spine=document.getElementById('spine'), fill=document.getElementById('fill');
+  if(spine&&fill){
+    spine.classList.add('js');
+    var nodes=[].slice.call(spine.querySelectorAll('.node')), tick=false;
+    var track=fill.parentNode;
+    var upd=function(){tick=false;var vh=innerHeight,mark=vh*0.55,r=track.getBoundingClientRect();
+      var p=Math.max(0,Math.min(1,(mark-r.top)/r.height));fill.style.height=(p*100).toFixed(2)+'%';
+      nodes.forEach(function(n){var d=n.querySelector('.dot').getBoundingClientRect();n.classList.toggle('on',d.top+d.height/2<=mark)});};
+    addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+    addEventListener('resize',upd);upd();
+  }
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+  var btn=document.getElementById('copy'), addr=document.getElementById('addr');
+  if(btn&&addr){
+    btn.addEventListener('click',function(){
+      var t=addr.textContent.trim();
+      function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1800)}
+      function fallback(){var r=document.createRange();r.selectNodeContents(addr);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected'}
+      try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
